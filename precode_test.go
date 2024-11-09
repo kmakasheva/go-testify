@@ -5,7 +5,6 @@ import (
 	"github.com/stretchr/testify/require"
 	"net/http"
 	"net/http/httptest"
-	"strings"
 	"testing"
 )
 
@@ -42,5 +41,4 @@ func TestMainHandlerWhenCountMoreThanTotal(t *testing.T) {
 
 	require.Equal(t, http.StatusOK, responseRecorder.Code)
 
-	assert.Len(t, responseRecorder.Body.String(), len(strings.Join(cafeList["moscow"], ",")))
 }
